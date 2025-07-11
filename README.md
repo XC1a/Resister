@@ -24,7 +24,7 @@ Let us have a look at the directory of this repository.
 8. File `testForTrace.sh` is used to get the cache access traces on a classical x86 system of different vulnerable programs. For instance, if we want to get the RSA cache access, this file needs to be used.
 9. File `testForTraceChiplet.sh` takes the responsibility to simulate the trace on the chiplet system.
 
-# 3. How to Build Your GGGem5
+# 3. How to Build Your Gem5
 Before you get started, please follow the instructions on gem5 website and install basic dependencies. The construction flow is based on `build.sh` and `buildx86O3.sh`. The difference between the two shells is the gem5 simulation mode: 
 - `build.sh` constructs the simple structure named *standalone* mode that only focuses on the packet transactions in the chiplet network. This mode is used in our project to (1) analyze the attack, (2) evaluate the defense efficiency, and (3) evaluate the detection latency.
 - `buildx86O3.sh` constructs the two-level cache CPU structure that can simulate the C programs. With the configuration of garnet, we can run benchmarks on this structure. This mode is used in the following scenarios: (1) capture the cache access traces, (2) run various  kinds of benchmarks.
